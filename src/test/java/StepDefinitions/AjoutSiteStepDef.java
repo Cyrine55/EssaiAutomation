@@ -11,7 +11,7 @@ public class AjoutSiteStepDef extends  BaseUtils{
 AjoutSitePage Sitepage=new AjoutSitePage();
 String IDinvalide="ùùù";
 @Given("Liste des sites affichees")
-public void liste_des_sites_affichees() {
+public void liste_des_sites_affichees() throws InterruptedException {
 	Sitepage.liste_des_sites_affichees();
 }
 

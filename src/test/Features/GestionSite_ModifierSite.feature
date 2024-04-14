@@ -10,6 +10,7 @@ Feature: Modifier un site
     @Site
     Scenario: Modifier Site Valide
     Given Liste des sites affichees
+    When Selectionner un sitee
     When Cliquer sur crayon modifier 
     And Popup affichee avec champ ID et type desactivee
     And Saisir les informations suivantes

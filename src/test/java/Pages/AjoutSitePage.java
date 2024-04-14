@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertFalse;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Formation.Utils.BaseUtils;
 import io.cucumber.datatable.DataTable;
@@ -24,9 +25,13 @@ public class AjoutSitePage extends BaseUtils {
 	 
 	
 	
-	public void liste_des_sites_affichees() {
+	public void liste_des_sites_affichees() throws InterruptedException {
+		Thread.sleep(4000);		
 		WebElement Gestionsite=driver.findElement(By.xpath("//span[normalize-space()='Gestion des sites']"));
-		  Actions action=new Actions(driver);  
+		//WebElement Gestionsite=driver.findElement(By.xpath("//span[contains(text(),'Gestion des sites')]"));
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		//WebElement Gestionsite=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Gestion des sites']")));  
+		Actions action=new Actions(driver);  
 		  action.moveToElement(Gestionsite).click().perform();
 	}
 	public void cliquer_sur_Ajouter() {
