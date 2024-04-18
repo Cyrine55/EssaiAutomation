@@ -14,9 +14,10 @@ Feature: Modifier un site
     When Cliquer sur crayon modifier 
     And Popup affichee avec champ ID et type desactivee
     And Saisir les informations suivantes
-    |Nom du site|Adresse   |Code postal  |Ville |
-    |Test12 |Auto12 |use12r |hubone.fr|
+    |Nom du site|Adresse   |
+    |cycy1 |cycy2 |
      And Cliquer sur Suivant
      And Saisir nouveau nom du zone et un nouveau statut
      And Enregistrer
+  Then modification avec succes
     
