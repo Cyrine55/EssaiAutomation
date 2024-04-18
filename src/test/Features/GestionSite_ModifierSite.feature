@@ -15,7 +15,7 @@ Feature: Modifier un site
     And Popup affichee avec champ ID et type desactivee
     And Saisir les informations suivantes
     |Nom du site|Adresse   |
-    |cycy1 |cycy2 |
+    |cycytest |cycy2tegj |
      And Cliquer sur Suivant
      And Saisir nouveau nom du zone et un nouveau statut
      And Enregistrer

@@ -12,19 +12,10 @@ import io.cucumber.datatable.DataTable;
 
 public class ModifierSitePage extends BaseUtils {
 
-int index=9;
+int index=8;
 
-
-	public void cliquer_sur_crayon_modifier() throws InterruptedException {
-		
-	   WebElement crayonmodif=driver.findElement(By.xpath("//tbody/tr[7]/td[7]/em[1]"));
-	   crayonmodif.click();
-	   Thread.sleep(1000);
-	    
-	}
-	
-	public void selectionner_un_sitee() {
-      List<WebElement> CheckSiteList=driver.findElements(By.xpath("//input[@type='checkbox']"));
+public void selectionner_un_sitee() {
+    List<WebElement> CheckSiteList=driver.findElements(By.xpath("//input[@type='checkbox']"));
 		// Sélectionner un checkbox avec un index que nous l'identifié 
 		if (index >= 0 && index < CheckSiteList.size()) {
 	        CheckSiteList.get(index).click();
@@ -33,6 +24,15 @@ int index=9;
 	    }
 		
 	}
+	public void cliquer_sur_crayon_modifier() throws InterruptedException {
+		
+	   WebElement crayonmodif=driver.findElement(By.xpath("//tbody/tr[3]/td[7]/em[1]"));
+	   crayonmodif.click();
+	   Thread.sleep(1000);
+	    
+	}
+	
+
 	
 	public void popup_affichee_avec_champ_id_et_type_desactivee() {
 	    WebElement IDSite=driver.findElement(By.xpath("//input[@placeholder='Id du site']"));
@@ -49,33 +49,26 @@ int index=9;
        
 	}
 	
-	public void saisir_nouveau_nom_du_zone_et_un_nouveau_statut() throws InterruptedException  {
-
-		/*WebElement statut2 = driver.findElement(By.xpath("//label[5]//span[1]//input[1]"));
-		 statut2.click();*/
-		 
-		 WebElement btnajouter=driver.findElement(By.xpath("//button[@type='button'][normalize-space()='Ajouter']"));
+	
+	public void saisir_nouveau_nom_du_zone_et_un_nouveau_statut() {
+		WebElement btnajouter=driver.findElement(By.xpath("//button[@type='button'][normalize-space()='Ajouter']"));
 		 btnajouter.click();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
-		Thread.sleep(1000);
-		//WebElement statut3 = driver.findElement(By.xpath("//*[contains(@class, 'ant-checkbox-input')][8]"));
-		//WebElement statut3 = driver.findElement(By.xpath("//span[@class='ant-checkbox'][8]"));
-		//WebElement statut3 = driver.findElement(By.xpath("//input[@type='checkbox'][8]"));
-		List<WebElement> Zones = driver.findElements(By.xpath("//input[@placeholder='Nom du zone']"));
-		WebElement textzone = Zones.get(1);
-		textzone.click();
-		//WebElement textzone=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Nom du zone'][2]"))); 
-		
+		 List<WebElement> Zones = driver.findElements(By.xpath("//input[@placeholder='Nom du zone']"));
+		 WebElement textzone = Zones.get(1);
+		 textzone.click();
 		 textzone.sendKeys("cyhcy");
-		List<WebElement> elements = driver.findElements(By.xpath("//span[@class='ant-checkbox']"));
-		WebElement statut3 = elements.get(14);
-		 statut3.click();
 		 
-		 Thread.sleep(500);
-		 
+		//Ici on  va mettre les bloc dans une liste w on a mis size-1, car le dernier bloc c'est pour les boutons donc on va pas faire la recherche dans ce bloc
+		List<WebElement> Blocs = driver.findElements(By.xpath("//app-add-site/div"));
+		int nbre_site = Blocs.size()-1;
+		
+		//Préparation d'un xpath dynamique pou un type de site
+		String Xpath_miseaurebut = "//app-add-site/div["+nbre_site+"]/div[2]/nz-checkbox-group/label[2]/span[1]/input";
+        driver.findElement(By.xpath(Xpath_miseaurebut)).click();
+
+		
 	}
-	
-	
 
 	
 	
