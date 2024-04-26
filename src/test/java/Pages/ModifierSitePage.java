@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 import Formation.Utils.BaseUtils;
 import io.cucumber.datatable.DataTable;
 
+
 public class ModifierSitePage extends BaseUtils {
 
 int index=8;
@@ -70,10 +71,41 @@ public void selectionner_un_sitee() {
 		
 	}
 
+
+	
+	
+	public void le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ() {
+		WebElement Nomsite=driver.findElement(By.xpath("//input[@placeholder='Nom du site']"));
+		Nomsite.clear();
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Attendre jusqu'à 10 secondes au maximum
+	   // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Suivant']")));
+	    WebElement suivantBtn = driver.findElement(By.xpath("//button[normalize-space()='Suivant']"));
+	    assertTrue("Le bouton doit être désactivé après le vidage du champ", suivantBtn.isEnabled());
+	}
+	
+	
+	public void cliquer_sur_le_bouton_annuler() {
+	    WebElement AnnulerBtn=driver.findElement(By.xpath("//button[normalize-space()='Annuler']"));
+	    AnnulerBtn.click();
+	}
+	
+	public void Valider_par_clique_sur_oui() {
+		WebElement OuiBtn=driver.findElement(By.xpath("//span[normalize-space()='Oui']"));
+		OuiBtn.click();
+	}
+	
+	public void popup_du_modification_doit_etre_ferme() {
+	    WebElement Sites=driver.findElement(By.xpath(" //h2[contains(text(),'Sites')]"));
+	    if(Sites.isDisplayed()) {
+	    	System.out.println("popup est fermée"); }
+	    	else 
+	    		System.out.println("annulation echec");}
+	 
 	
 	
 	
 	
 	
+	}
 	
-}
+

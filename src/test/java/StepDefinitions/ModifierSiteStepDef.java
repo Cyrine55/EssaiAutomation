@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import Formation.Utils.BaseUtils;
 import Pages.ModifierSitePage;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ModifierSiteStepDef extends  BaseUtils{
@@ -44,4 +45,35 @@ public void saisir_nouveau_nom_du_zone_et_un_nouveau_statut(){
 }
 
 
+@Test
+@Then("le bouton Suivant doit etre desactive apres vidage du champ")
+public void le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ() {
+	ModifSitePage.le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ();
 }
+
+@Test
+@When("Cliquer sur le bouton Annuler")
+public void cliquer_sur_le_bouton_annuler() {
+	ModifSitePage.cliquer_sur_le_bouton_annuler();
+}
+
+@Test
+@When("Valider par clique sur oui") 
+public void Valider_par_clique_sur_oui() {
+	ModifSitePage.Valider_par_clique_sur_oui();	
+}
+
+@Test
+@Then("Popup du modification doit etre ferme")
+public void popup_du_modification_doit_etre_ferme() {
+   ModifSitePage.popup_du_modification_doit_etre_ferme();
+
+
+}
+
+}
+
+
+
+
+
