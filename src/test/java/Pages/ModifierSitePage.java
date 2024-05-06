@@ -14,6 +14,8 @@ import io.cucumber.datatable.DataTable;
 public class ModifierSitePage extends BaseUtils {
 
 int index=8;
+String siteType="Centre de distribution";
+
 
 public void selectionner_un_sitee() {
     List<WebElement> CheckSiteList=driver.findElements(By.xpath("//input[@type='checkbox']"));
@@ -65,14 +67,11 @@ public void selectionner_un_sitee() {
 		int nbre_site = Blocs.size()-1;
 		
 		//Préparation d'un xpath dynamique pou un type de site
-		String Xpath_miseaurebut = "//app-add-site/div["+nbre_site+"]/div[2]/nz-checkbox-group/label[2]/span[1]/input";
+		      String Xpath_miseaurebut = "//app-add-site/div["+nbre_site+"]/div[2]/nz-checkbox-group/label[2]/span[1]/input";
         driver.findElement(By.xpath(Xpath_miseaurebut)).click();
 
 		
 	}
-
-
-	
 	
 	public void le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ() {
 		WebElement Nomsite=driver.findElement(By.xpath("//input[@placeholder='Nom du site']"));
@@ -95,13 +94,24 @@ public void selectionner_un_sitee() {
 	}
 	
 	public void popup_du_modification_doit_etre_ferme() {
-	    WebElement Sites=driver.findElement(By.xpath(" //h2[contains(text(),'Sites')]"));
+	    WebElement Sites=driver.findElement(By.xpath("//h2[contains(text(),'Sites')]"));
 	    if(Sites.isDisplayed()) {
 	    	System.out.println("popup est fermée"); }
 	    	else 
 	    		System.out.println("annulation echec");}
 	 
-	
+	public void Selectionner_un_type() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebElement TypeSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nz-select-search[contains(@class, 'ant-select-selection-search')]")));
+		TypeSearch.click();
+		Thread.sleep(1000);
+		//String xpathcentredistribution= "//div[@class='ant-select-item-option-content'][normalize-space()='Centre de distribution']";		
+		//String xpathcentredistribution = "//div[@class='ant-select-item-option-content'][normalize-space()='" + SiteType + "']";
+		String xpathcentredistribution = String.format("//div[@class='ant-select-item-option-content'][normalize-space()='%s']", siteType);
+		WebElement SiteType=driver.findElement(By.xpath(xpathcentredistribution));
+		//WebElement SiteType=driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][normalize-space()='Centre de distribution']"));
+		SiteType.click();
+	}
 	
 	
 	

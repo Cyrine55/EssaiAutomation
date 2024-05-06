@@ -71,7 +71,35 @@ public void popup_du_modification_doit_etre_ferme() {
 
 }
 
+@Test
+@When("Selectionner un type")
+public void Selectionner_un_type() throws InterruptedException {
+	ModifSitePage.Selectionner_un_type();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
