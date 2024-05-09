@@ -76,8 +76,22 @@ public void popup_du_modification_doit_etre_ferme() {
 public void Selectionner_un_type() throws InterruptedException {
 	ModifSitePage.Selectionner_un_type();
 }
+@Test
+@When("Saisir une ville")
+public void saisir_une_ville() {
+	ModifSitePage.saisir_une_ville();  
+}
+@Test
+@When("cliquer sur le bouton Valider")
+public void cliquer_sur_le_bouton_valider() {
+	ModifSitePage.cliquer_sur_le_bouton_valider();
+}
 
-
+@Test
+@Then("Resultat correspondante affichee")
+public void resultat_correspondante_affichee() {
+	ModifSitePage.resultat_correspondante_affichee();
+}
 
 
 

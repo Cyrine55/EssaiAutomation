@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertTrue;
+
 import Formation.Utils.BaseUtils;
 import io.cucumber.datatable.DataTable;
 
@@ -101,17 +104,68 @@ public void selectionner_un_sitee() {
 	    		System.out.println("annulation echec");}
 	 
 	public void Selectionner_un_type() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		WebElement TypeSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nz-select-search[contains(@class, 'ant-select-selection-search')]")));
 		TypeSearch.click();
-		Thread.sleep(1000);
-		//String xpathcentredistribution= "//div[@class='ant-select-item-option-content'][normalize-space()='Centre de distribution']";		
-		//String xpathcentredistribution = "//div[@class='ant-select-item-option-content'][normalize-space()='" + SiteType + "']";
-		String xpathcentredistribution = String.format("//div[@class='ant-select-item-option-content'][normalize-space()='%s']", siteType);
-		WebElement SiteType=driver.findElement(By.xpath(xpathcentredistribution));
-		//WebElement SiteType=driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][normalize-space()='Centre de distribution']"));
+		Thread.sleep(2000);
+		String xpathType = String.format("//div[@class='ant-select-item-option-content'][normalize-space()='%s']", siteType);
+		WebElement SiteType=driver.findElement(By.xpath(xpathType));
 		SiteType.click();
 	}
+	
+	public void saisir_une_ville() {
+	 WebElement VilleInput=driver.findElement(By.id("city"));
+	 VilleInput.sendKeys("Beauvais");
+	}
+	
+	
+	public void cliquer_sur_le_bouton_valider() {
+	   WebElement ValiderBtnFiltre=driver.findElement(By.xpath("//button[normalize-space()='Valider']"));
+	   ValiderBtnFiltre.click();
+	}
+	
+	
+	public void resultat_correspondante_affichee() {
+      String TypeChoisi = driver.findElement(By.xpath("//nz-select-item")).getText();
+	  System.out.println(TypeChoisi);
+	  String VilleChoisi=driver.findElement(By.id("city")).getAttribute("value");
+	  System.out.println("la ville est : "+VilleChoisi);
+	  
+	  //localisation du nom du ville dans le tableau
+	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	  String VilleFinal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[2]/div/app-simple-table/div/div/nz-table/nz-spin/div/div/nz-table-inner-scroll/div[2]/table/tbody/tr[2]/td[3]"))).getText();
+	  System.out.println("text dans le tableau est " +VilleFinal);
+	  
+	  //localisation du nom du type dans le tableau
+	  String TypeFinal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nz-table-inner-scroll/div[2]/table/tbody/tr[2]/td[5]"))).getText();
+	  System.out.println("text dans le tableau est " +TypeFinal);
+	  
+	  assertTrue("ville pas confrome" ,TypeChoisi.equals(TypeFinal));
+	  //assertTrue("La ville n'est pas conforme : " + TypeChoisi + " n'est pas égal à " + TypeFinal, TypeChoisi.equals(TypeFinal));
+	 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
