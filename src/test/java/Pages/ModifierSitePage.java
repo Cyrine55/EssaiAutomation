@@ -124,7 +124,6 @@ public void selectionner_un_sitee() {
 	   ValiderBtnFiltre.click();
 	}
 	
-	
 	public void resultat_correspondante_affichee() {
       String TypeChoisi = driver.findElement(By.xpath("//nz-select-item")).getText();
 	  System.out.println(TypeChoisi);
@@ -140,10 +139,7 @@ public void selectionner_un_sitee() {
 	  String TypeFinal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nz-table-inner-scroll/div[2]/table/tbody/tr[2]/td[5]"))).getText();
 	  System.out.println("text dans le tableau est " +TypeFinal);
 	  
-	  assertTrue("ville pas confrome" ,TypeChoisi.equals(TypeFinal));
-	  //assertTrue("La ville n'est pas conforme : " + TypeChoisi + " n'est pas égal à " + TypeFinal, TypeChoisi.equals(TypeFinal));
-	 
-	}
+	  assertTrue("ville pas confrome" ,TypeChoisi.equals(TypeFinal)); }
 	
 	
 	

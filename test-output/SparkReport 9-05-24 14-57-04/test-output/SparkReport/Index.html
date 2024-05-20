@@ -1,0 +1,1782 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">mai 9, 2024 02:57:03 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@tag</a><a class="dropdown-item" href="#">@Site</a><a class="dropdown-item" href="#">@Utilisateur</a><a class="dropdown-item" href="#">@Sitetest</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Ajout Utilisateur</p>
+            <p class="text-sm">
+              <span>14:57:04</span> / <span>00:00:34:493</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Ajout Utilisateur</h5>
+<span class='badge badge-success'>05.09.2024 14:57:04</span>
+<span class='badge badge-danger'>05.09.2024 14:57:39</span>
+<span class='badge badge-default'>00:00:34:493</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Ajout Utilisateur avec infos valides</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.connexion_avec_succès_et_redirection_sur_linterface_gestion_des_utilisateurs()">
+                <span>Then Connexion avec succès et redirection sur linterface Gestion des utilisateurs</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.utilisateur_authentifié_et_dans_la_page_gestion_utilisateur()">
+                <span>Given Utilisateur authentifié et dans la page gestion utilisateur</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.cliquer_sur_le_bouton_ajouter()">
+                <span>When Cliquer sur le bouton Ajouter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.saisir_prenom_et_identifiant()">
+                <span>And Saisir Prenom et identifiant</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.choisir_un_role()">
+                <span>And Choisir un role</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.saisir_une_adresse_mail_valide()">
+                <span>And Saisir une adresse mail valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.generer_un_mot_de_passe()">
+                <span>And Generer un mot de passe</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinitions.AjoutUtilisateurStepDef.choisiir_un_site()">
+                <span>And Choisiir un site</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.91)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a59f18f1f4da7366a39cf1a0953736bc, getElementAttribute {id=f.60D05A274F00C336345E837364DC676F.d.75FB95929DFEFAE5DE8C06A739A24395.e.79, name=title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.155 (df4f029328b..., userDataDir: C:\Users\Cyrine\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61513}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61513/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a59f18f1f4da7366a39cf1a0953736bc)] -> tag name: nz-option-item]
+Session ID: a59f18f1f4da7366a39cf1a0953736bc
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:150)
+	at Pages.AjoutUtilisateurPage.choisiir_un_site(AjoutUtilisateurPage.java:81)
+	at StepDefinitions.AjoutUtilisateurStepDef.choisiir_un_site(AjoutUtilisateurStepDef.java:48)
+	at ✽.Choisiir un site(file:///C:/Users/Cyrine/Desktop/FormationAuto/src/test/Features/AjoutUtilisateur.feature:20)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.AjoutUtilisateurStepDef.cliquer_sur_enregistrer()">
+                <span>And Cliquer sur Enregistrer</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.AjoutUtilisateurStepDef.utilisateur_ajoute_avec_succes()">
+                <span>Then Utilisateur ajoute avec succes</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.AjoutUtilisateurStepDef.je_ferme_le_navigateur()">
+                <span>And je ferme le navigateur</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Ajout Utilisateur X</p>
+            <p class="text-sm">
+              <span>14:57:39</span> / <span>00:00:11:028</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Ajout Utilisateur X</h5>
+<span class='badge badge-success'>05.09.2024 14:57:39</span>
+<span class='badge badge-danger'>05.09.2024 14:57:50</span>
+<span class='badge badge-default'>00:00:11:028</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log fail-bg mr-2">Fail</span>Ajout Utilisateur X</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.connexion_avec_succès_et_redirection_sur_linterface_gestion_des_utilisateurs()">
+                <span>Then Connexion avec succès et redirection sur linterface Gestion des utilisateurs</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.utilisateur_authentifié_et_dans_la_page_gestion_utilisateur()">
+                <span>Given Utilisateur authentifié et dans la page gestion utilisateur</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.cliquer_sur_le_bouton_ajouter()">
+                <span>When Cliquer sur le bouton Ajouter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutUtilisateurStepDef.j_ajoute_l_utilisateur_suivant(io.cucumber.datatable.DataTable)">
+                <span>And j ajoute l utilisateur suivant</span>
+      <div><table class='markup-table table '><tr><td>Prenom</td><td>Nom</td><td>Identifiant</td><td>Adresse mail</td><td>Role</td><td>Sites</td></tr><tr><td>Test12</td><td>Auto12</td><td>use12r</td><td>hubone.fr</td><td>Admin</td><td>site2</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinitions.AjoutUtilisateurStepDef.generer_un_mot_de_passe()">
+                <span>And Generer un mot de passe</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-ckf-c183="" type="button" class="form-button generer ng-star-inserted" style="">...</button> is not clickable at point (894, 401). Other element would receive the click: <nz-option-item class="ant-select-item ant-select-item-option ng-star-inserted" title="NomSiteAuto4">...</nz-option-item>
+  (Session info: chrome=124.0.6367.91)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8515b3891e19124978806a4d03cb5cc9, clickElement {id=f.3D1BE98493FB2FFAB6321F954192D8E2.d.EA4A9B8A6D708B3B1081C61C7F08CD9B.e.93}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.155 (df4f029328b..., userDataDir: C:\Users\Cyrine\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61550/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (8515b3891e19124978806a4d03cb5cc9)] -> xpath: //button[@type='button']]
+Session ID: 8515b3891e19124978806a4d03cb5cc9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Pages.AjoutUtilisateurPage.generer_un_mot_de_passe(AjoutUtilisateurPage.java:69)
+	at StepDefinitions.AjoutUtilisateurStepDef.generer_un_mot_de_passe(AjoutUtilisateurStepDef.java:43)
+	at ✽.Generer un mot de passe(file:///C:/Users/Cyrine/Desktop/FormationAuto/src/test/Features/AjoutUtilisateurX.feature:18)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.AjoutUtilisateurStepDef.cliquer_sur_enregistrer()">
+                <span>And Cliquer sur Enregistrer</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.AjoutUtilisateurStepDef.utilisateur_ajoute_avec_succes()">
+                <span>Then Utilisateur ajoute avec succes</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.AjoutUtilisateurStepDef.je_ferme_le_navigateur()">
+                <span>And je ferme le navigateur</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="34"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Authentification à lapplication GT</p>
+            <p class="text-sm">
+              <span>14:57:50</span> / <span>00:00:11:174</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Authentification à lapplication GT</h5>
+<span class='badge badge-success'>05.09.2024 14:57:50</span>
+<span class='badge badge-danger'>05.09.2024 14:58:01</span>
+<span class='badge badge-default'>00:00:11:174</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Authentification avec email et mdp valides</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.connexion_avec_succès_et_redirection_sur_linterface_gestion_des_utilisateurs()">
+                <span>Then Connexion avec succès et redirection sur linterface Gestion des utilisateurs</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Ajouter un site valide</p>
+            <p class="text-sm">
+              <span>14:58:01</span> / <span>00:01:19:506</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Ajouter un site valide</h5>
+<span class='badge badge-success'>05.09.2024 14:58:01</span>
+<span class='badge badge-danger'>05.09.2024 14:59:20</span>
+<span class='badge badge-default'>00:01:19:506</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log fail-bg mr-2">Fail</span>Ajouter un site avec donnes valides</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.cliquer_sur_Ajouter()">
+                <span>When cliquer sur Ajouter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.remplir_informations_du_site(io.cucumber.datatable.DataTable)">
+                <span>And Remplir informations du site</span>
+      <div><table class='markup-table table '><tr><td>ID</td><td>Nom</td><td>Type</td><td>Adresse</td><td>Code postal</td><td>Ville</td></tr><tr><td>Sitecyrine1</td><td>Sitecyrine1</td><td>Restaurant</td><td>AdresseAuto</td><td>04034</td><td>VilleAuto5</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.cliquer_sur_suivant()">
+                <span>And Cliquer sur Suivant</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.remplir_zone()">
+                <span>And Remplir Zone</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.cocher_statut()">
+                <span>And Cocher Statut</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.enregistrer()">
+                <span>And Enregistrer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinitions.AjoutSiteStepDef.site_enregistre()">
+                <span>Then Site enregistre</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Le site ajouté n'est pas présent 
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at Pages.AjoutSitePage.site_enregistre(AjoutSitePage.java:102)
+	at StepDefinitions.AjoutSiteStepDef.site_enregistre(AjoutSiteStepDef.java:50)
+	at ✽.Site enregistre(file:///C:/Users/Cyrine/Desktop/FormationAuto/src/test/Features/GestionSite_AjouterSite.feature:21)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log pass-bg mr-2">Pass</span>Ajouter un site avec donnes errones</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.cliquer_sur_Ajouter()">
+                <span>When cliquer sur Ajouter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.remplir_informations_invalides_du_site(io.cucumber.datatable.DataTable)">
+                <span>And Remplir informations invalides du site</span>
+      <div><table class='markup-table table '><tr><td>ID</td><td>Nom</td><td>Type</td><td>Adresse</td><td>Code postal</td><td>Ville</td></tr><tr><td>IdsiteIdsiteIdsiteIdsiteIdsiteIdsiteIdsiteIdsiteIcv</td><td>NomSiteNomSiteNomSiteNomSitnoms</td><td>Centre de lavage</td><td>AdresseAuto</td><td>test</td><td>Villetest</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.messages_erreurs_affiches()">
+                <span>Then Messages erreurs affiches</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="67"><span class="badge log fail-bg mr-2">Fail</span>Rechercher des sites par ID</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.saisir_caracteres_id_dans_la_zone_de_recherche()">
+                <span>When Saisir caracteres ID dans la zone de recherche</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinitions.AjoutSiteStepDef.site_relatif_au_id_affiche()">
+                <span>Then Site relatif au ID affiche</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: L'identifiant ne correspond pas aux caractères saisis
+	at Pages.AjoutSitePage.site_relatif_au_id_affiche(AjoutSitePage.java:189)
+	at StepDefinitions.AjoutSiteStepDef.site_relatif_au_id_affiche(AjoutSiteStepDef.java:72)
+	at ✽.Site relatif au ID affiche(file:///C:/Users/Cyrine/Desktop/FormationAuto/src/test/Features/GestionSite_AjouterSite.feature:38)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>Rechercher des sites par ID non trouve</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.saisir_caracteres_id_nexiste_pas()">
+                <span>When Saisir caracteres ID nexiste pas</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_vide_avec_message_aucune_donnee()">
+                <span>Then liste vide avec message aucune donnee</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="85"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Modifier un site</p>
+            <p class="text-sm">
+              <span>14:59:20</span> / <span>00:01:16:286</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Modifier un site</h5>
+<span class='badge badge-success'>05.09.2024 14:59:20</span>
+<span class='badge badge-danger'>05.09.2024 15:00:37</span>
+<span class='badge badge-default'>00:01:16:286</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=85</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="86"><span class="badge log fail-bg mr-2">Fail</span>Modifier Site Valide</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.selectionner_un_sitee()">
+                <span>When Selectionner un sitee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.cliquer_sur_crayon_modifier()">
+                <span>When Cliquer sur crayon modifier</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.popup_affichee_avec_champ_id_et_type_desactivee()">
+                <span>And Popup affichee avec champ ID et type desactivee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.saisir_les_informations_suivantes(io.cucumber.datatable.DataTable)">
+                <span>And Saisir les informations suivantes</span>
+      <div><table class='markup-table table '><tr><td>Nom du site1</td><td>Adresse1</td></tr><tr><td>cyrinetestd1</td><td>cyrine2tegjd1</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.cliquer_sur_suivant()">
+                <span>And Cliquer sur Suivant</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.saisir_nouveau_nom_du_zone_et_un_nouveau_statut()">
+                <span>And Saisir nouveau nom du zone et un nouveau statut</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.enregistrer()">
+                <span>And Enregistrer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>Then modification avec succes</span>
+      <div>Step undefined
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="101"><span class="badge log pass-bg mr-2">Pass</span>Modification Site invalide avec champ NomSite vide</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.selectionner_un_sitee()">
+                <span>When Selectionner un sitee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.cliquer_sur_crayon_modifier()">
+                <span>When Cliquer sur crayon modifier</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ()">
+                <span>Then le bouton Suivant doit etre desactive apres vidage du champ</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="111"><span class="badge log fail-bg mr-2">Fail</span>Annuler la modification du site</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.selectionner_un_sitee()">
+                <span>When Selectionner un sitee</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.cliquer_sur_crayon_modifier()">
+                <span>When Cliquer sur crayon modifier</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.cliquer_sur_le_bouton_annuler()">
+                <span>And Cliquer sur le bouton Annuler</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinitions.ModifierSiteStepDef.Valider_par_clique_sur_oui()">
+                <span>And Valider par clique sur oui</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="ng-star-inserted">...</span> is not clickable at point (789, 356). Other element would receive the click: <nz-modal-container tabindex="-1" role="dialog" class="ng-tns-c49-32 ng-trigger ng-trigger-modalContainer ng-star-inserted ant-modal-wrap" style="z-index: 1000;">...</nz-modal-container>
+  (Session info: chrome=124.0.6367.91)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f4122240bb454109fc2c677a6eca52d, clickElement {id=f.F0F0DDB68C9244700B2040F3D5ECD5A4.d.1ECD9ED6ADEB7ADAC5DFD72DE14DCF6A.e.96}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.91, chrome: {chromedriverVersion: 124.0.6367.155 (df4f029328b..., userDataDir: C:\Users\Cyrine\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61933}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61933/devtoo..., se:cdpVersion: 124.0.6367.91, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0f4122240bb454109fc2c677a6eca52d)] -> xpath: //span[normalize-space()='Oui']]
+Session ID: 0f4122240bb454109fc2c677a6eca52d
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Pages.ModifierSitePage.Valider_par_clique_sur_oui(ModifierSitePage.java:96)
+	at StepDefinitions.ModifierSiteStepDef.Valider_par_clique_sur_oui(ModifierSiteStepDef.java:63)
+	at ✽.Valider par clique sur oui(file:///C:/Users/Cyrine/Desktop/FormationAuto/src/test/Features/GestionSite_ModifierSite.feature:39)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.ModifierSiteStepDef.popup_du_modification_doit_etre_ferme()">
+                <span>Then Popup du modification doit etre ferme</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="123"><span class="badge log pass-bg mr-2">Pass</span>Filtre site par type et ville valide avec menu droit</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.Selectionner_un_type()">
+                <span>When Selectionner un type</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.saisir_une_ville()">
+                <span>When Saisir une ville</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.cliquer_sur_le_bouton_valider()">
+                <span>And cliquer sur le bouton Valider</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.ModifierSiteStepDef.resultat_correspondante_affichee()">
+                <span>Then Resultat correspondante affichee</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="134"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Supprimer un site</p>
+            <p class="text-sm">
+              <span>15:00:37</span> / <span>00:00:19:702</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Supprimer un site</h5>
+<span class='badge badge-success'>05.09.2024 15:00:37</span>
+<span class='badge badge-danger'>05.09.2024 15:00:56</span>
+<span class='badge badge-default'>00:00:19:702</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=134</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="135"><span class="badge log pass-bg mr-2">Pass</span>Supprimer site</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.utilisateur_ouvre_la_page_de_connexion()">
+                <span>Given Utilisateur ouvre la page de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_identifiant_valide()">
+                <span>When Entrer un identifiant valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.entrer_un_mot_de_passe_valide()">
+                <span>And Entrer un mot de passe valide</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AuthentificationStepDef.valider_les_informations_et_cliquer_sur_le_bouton_de_connexion()">
+                <span>And Valider les informations et cliquer sur le bouton de connexion</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.AjoutSiteStepDef.liste_des_sites_affichees()">
+                <span>Given Liste des sites affichees</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.SupprimerSiteStepDef.cliquer_sur_le_bouton_supprimer()">
+                <span>And Cliquer sur le bouton Supprimer</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.SupprimerSiteStepDef.le_message_de_suppression_est_affiche(java.lang.String)">
+                <span>And le message de suppression est affiche "Êtes-vous sûr de bien vouloir supprimer ce site?"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.SupprimerSiteStepDef.cliquer_sur_oui()">
+                <span>And Cliquer sur oui</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.SupprimerSiteStepDef.site_supprime_avec_un_message_succes()">
+                <span>Then Site supprime avec un message succes</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.StaleElementReferenceException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.StaleElementReferenceException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>And Choisiir un site</a>
+<div class="">
+<span class="badge badge-default">Ajout Utilisateur.Ajout Utilisateur avec infos valides.And Choisiir un site</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='30'>And Generer un mot de passe</a>
+<div class="">
+<span class="badge badge-default">Ajout Utilisateur X.Ajout Utilisateur X.And Generer un mot de passe</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:00:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='121'>And Valider par clique sur oui</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Annuler la modification du site.And Valider par clique sur oui</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:58:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='56'>Then Site enregistre</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Ajouter un site avec donnes valides.Then Site enregistre</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:59:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='75'>Then Site relatif au ID affiche</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Rechercher des sites par ID.Then Site relatif au ID affiche</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>6</span>
+<span class='badge log badge-danger'>6</span>
+</span>
+<p class="name">@tag</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag</h4>
+<span status="pass" class='badge log pass-bg'>6 passed</span>
+<span status="fail" class='badge log badge-danger'>6 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Ajout Utilisateur avec infos valides</a>
+<div class="">
+<span class="badge badge-default">Ajout Utilisateur.Ajout Utilisateur avec infos valides</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='20'>Ajout Utilisateur X</a>
+<div class="">
+<span class="badge badge-default">Ajout Utilisateur X.Ajout Utilisateur X</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:57:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='35'>Authentification avec email et mdp valides</a>
+<div class="">
+<span class="badge badge-default">Authentification à lapplication GT.Authentification avec email et mdp valides</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:58:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='43'>Ajouter un site avec donnes valides</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Ajouter un site avec donnes valides</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:58:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='57'>Ajouter un site avec donnes errones</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Ajouter un site avec donnes errones</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:58:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='67'>Rechercher des sites par ID</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Rechercher des sites par ID</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:59:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='76'>Rechercher des sites par ID non trouve</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Rechercher des sites par ID non trouve</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:59:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='86'>Modifier Site Valide</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Modifier Site Valide</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:59:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='101'>Modification Site invalide avec champ NomSite vide</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Modification Site invalide avec champ NomSite vide</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:59:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='111'>Annuler la modification du site</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Annuler la modification du site</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='123'>Filtre site par type et ville valide avec menu droit</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Filtre site par type et ville valide avec menu droit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='135'>Supprimer site</a>
+<div class="">
+<span class="badge badge-default">Supprimer un site.Supprimer site</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@Site</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Site</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:58:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='43'>Ajouter un site avec donnes valides</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Ajouter un site avec donnes valides</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:58:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='57'>Ajouter un site avec donnes errones</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Ajouter un site avec donnes errones</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:58:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='67'>Rechercher des sites par ID</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Rechercher des sites par ID</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:59:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='76'>Rechercher des sites par ID non trouve</a>
+<div class="">
+<span class="badge badge-default">Ajouter un site valide.Rechercher des sites par ID non trouve</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:59:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='86'>Modifier Site Valide</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Modifier Site Valide</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:59:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='101'>Modification Site invalide avec champ NomSite vide</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Modification Site invalide avec champ NomSite vide</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:59:52 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='111'>Annuler la modification du site</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Annuler la modification du site</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='134' id='135'>Supprimer site</a>
+<div class="">
+<span class="badge badge-default">Supprimer un site.Supprimer site</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@Utilisateur</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Utilisateur</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Ajout Utilisateur avec infos valides</a>
+<div class="">
+<span class="badge badge-default">Ajout Utilisateur.Ajout Utilisateur avec infos valides</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:57:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='20'>Ajout Utilisateur X</a>
+<div class="">
+<span class="badge badge-default">Ajout Utilisateur X.Ajout Utilisateur X</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:57:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='35'>Authentification avec email et mdp valides</a>
+<div class="">
+<span class="badge badge-default">Authentification à lapplication GT.Authentification avec email et mdp valides</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Sitetest</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Sitetest</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:00:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='123'>Filtre site par type et ville valide avec menu droit</a>
+<div class="">
+<span class="badge badge-default">Modifier un site.Filtre site par type et ville valide avec menu droit</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>mai 9, 2024 02:57:03 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>mai 9, 2024 03:00:56 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>2</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>4</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='33%'>
+<b>2</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='66%'><b>4</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'><b>6</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='50%'><b>6</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='88%'><b>102</b> steps passed</small></div>
+<div>
+<small data-tooltip='5%'><b>6</b> steps failed,
+<b>7</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Ajout Utilisateur":34.493,"Ajout Utilisateur X":11.028,"Authentification à lapplication GT":11.174,"Ajouter un site valide":79.506,"Modifier un site":76.286,"Supprimer un site":19.702
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@tag</td>
+<td>6</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@Site</td>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@Utilisateur</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>33,333%</td>
+</tr>
+<tr>
+<td>@Sitetest</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 2,
+failParent: 4,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 6,
+failChild: 6,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 102,
+failGrandChild: 6,
+warningGrandChild: 0,
+skipGrandChild: 7,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
