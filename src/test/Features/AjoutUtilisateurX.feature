@@ -14,7 +14,7 @@ Background:
   When Cliquer sur le bouton Ajouter
   And j ajoute l utilisateur suivant 
    |Prenom|Nom   |Identifiant  | Adresse mail  |Role  | Sites |
-   |Test12 |Auto12 |use12r |hubone.fr| Admin |site2 |
+   |Test02 |Auto02 |use02r |hubone.fr| Admin |site2 |
    And Generer un mot de passe
    And Cliquer sur Enregistrer
    Then Utilisateur ajoute avec succes

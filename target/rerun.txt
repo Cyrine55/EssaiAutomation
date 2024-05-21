@@ -1,4 +1,3 @@
-file:src/test/Features/AjoutUtilisateurX.feature:12
-file:src/test/Features/AjoutUtilisateur.feature:13
+file:src/test/Features/GestionStocks_ExpeditionsExport.feature:11
 file:src/test/Features/GestionSite_AjouterSite.feature:11:35
-file:src/test/Features/GestionSite_ModifierSite.feature:11:34
+file:src/test/Features/GestionSite_ModifierSite.feature:11

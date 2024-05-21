@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Formation.Utils.BaseUtils;
@@ -83,13 +84,17 @@ public void saisir_prenom_et_identifiant() {
  
 
 	public void generer_un_mot_de_passe() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		wait.until(ExpectedConditions.elementToBeClickable(MdpButton));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", MdpButton);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", MdpButton);
 		MdpButton.click();
 	    System.out.println("le mdpd generé est:"+mdp.getAttribute("value"));
 	}
  
  
  public void choisiir_un_site(String Sitename) throws InterruptedException {
+	 Thread.sleep(2000);
 	 WebElement site=driver.findElement(By.id("sites")) ;
 	  site.click();
 	  
@@ -99,6 +104,7 @@ public void saisir_prenom_et_identifiant() {
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", option);
 				break;
 			}
+			
 		}
 	}
  public void cliquer_sur_enregistrer() {
@@ -117,6 +123,8 @@ public void saisir_prenom_et_identifiant() {
 		 choisir_un_role(role);
 		 String Sitename=userdata.cell(1, 5);
 		 choisiir_un_site(Sitename);
+		 Thread.sleep(2000);
+
  }
 
  
