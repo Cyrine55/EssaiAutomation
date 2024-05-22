@@ -13,7 +13,7 @@ Feature: Ajouter un site valide
    When cliquer sur Ajouter
    And Remplir informations du site
    | ID       | Nom         | Type       | Adresse     | Code postal | Ville  |
-   | Sitecyrine1 | Sitecyrine1 | Restaurant | AdresseAuto |  04034 | VilleAuto5 |
+   | Sitetvvest | Svitetesvts | Restaurant | AdresseAuto |  04034 | VilleAuto5 |
   And Cliquer sur Suivant
   And Remplir Zone
   And Cocher Statut

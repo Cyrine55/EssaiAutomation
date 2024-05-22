@@ -12,6 +12,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.junit.Assert.assertTrue;
@@ -22,80 +24,106 @@ import Formation.Utils.BaseUtils;
 import io.cucumber.datatable.DataTable;
 
 public class AjoutSitePage extends BaseUtils {
+	
+	 public AjoutSitePage() {
+		PageFactory.initElements(driver, this);
+	 }
+	
+	 @FindBy(xpath="//span[normalize-space()='Gestion des sites']")
+	 WebElement Gestionsite;
+	 @FindBy(xpath="//button[normalize-space()='Ajouter']")
+	 WebElement AjoutSite;
+	 @FindBy(xpath="//input[@placeholder='Id du site']")
+	 WebElement IDsite;
+	 @FindBy(xpath="//input[@placeholder='Nom du site']")
+	 WebElement Nomsite;
+	 @FindBy(id="type")
+	 WebElement dropdowntype;
 	 
-	
-	
+	 @FindBy(tagName="nz-option-item")
+	 List<WebElement> Optionssite;
+	 @FindBy(xpath="//input[@placeholder='Adresse']")
+	 WebElement adresse;
+	 @FindBy(xpath="//input[@placeholder='Code postal']")
+	 WebElement postal;
+	 @FindBy(xpath="//input[@formcontrolname='ville']")
+	 WebElement ville;
+	 @FindBy(xpath="//button[normalize-space()='Suivant']")
+	 WebElement suivantbtn;
+	 
+	 @FindBy(xpath="//input[@placeholder='Nom du zone']")
+	 WebElement webzone; 
+	 @FindBy(xpath="//label[@class='ant-checkbox-wrapper ant-checkbox-group-item ng-star-inserted']")
+	 WebElement statut;
+	 @FindBy(xpath="//button[@type='submit']")
+	 WebElement enregistrersite;
+	 
+	 
+	 @FindBy(xpath="//td[@class='ant-table-cell-fix-left-last ant-table-cell ant-table-cell-fix-left']")
+	 List<WebElement> siteElements;
+	 
+	 
+	 
+	 //erreur 
+	 @FindBy(xpath="(//div[contains(@role,'alert') and contains(text(),'Erreur de saisir id')])[1]")
+	WebElement erreurId;
+	 @FindBy(xpath="(//div[contains(@role,'alert') and contains(text(),'Erreur saisie nom')])")
+	WebElement erreurNom;
+	 @FindBy(xpath="(//div[contains(@role,'alert') and contains(text(),'Erreur saisie code postal')])")
+		WebElement postal1;
+		 
 	public void liste_des_sites_affichees() throws InterruptedException {
 		Thread.sleep(4000);		
-		WebElement Gestionsite=driver.findElement(By.xpath("//span[normalize-space()='Gestion des sites']"));
-		//WebElement Gestionsite=driver.findElement(By.xpath("//span[contains(text(),'Gestion des sites')]"));
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		//WebElement Gestionsite=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Gestion des sites']")));  
 		Actions action=new Actions(driver);  
 		  action.moveToElement(Gestionsite).click().perform();
 	}
 	public void cliquer_sur_Ajouter() {
-		WebElement AjoutSite=driver.findElement(By.xpath("//button[normalize-space()='Ajouter']"));
 		AjoutSite.click();
 	}
 	 
 	public void remplir_informations_du_site(DataTable dataTable) throws InterruptedException {
-		
-	    WebElement IDsite=driver.findElement(By.xpath("//input[@placeholder='Id du site']"));
+	
 	    IDsite.sendKeys(dataTable.cell(1, 0));
-	    WebElement Nomsite=driver.findElement(By.xpath("//input[@placeholder='Nom du site']"));
 	    Nomsite.sendKeys(dataTable.cell(1, 1));
-	   
-	    WebElement dropdowntype=driver.findElement(By.id("type"));
 	    dropdowntype.click();
+	    
 	    String typename1=(dataTable.cell(1, 2));
-	    List <WebElement> Optionssite=driver.findElements(By.tagName("nz-option-item")) ;
 	    for (WebElement option: Optionssite) {
 	    	if(option.getAttribute("title").equals(typename1)) {
 	    		((JavascriptExecutor) driver).executeScript("arguments[0].click();", option);
 				break;	
 	    	}
 	    }
-	    
-	    WebElement adresse=driver.findElement(By.xpath("//input[@placeholder='Adresse']"));
-	    adresse.sendKeys(dataTable.cell(1, 3));
-	    
-	    WebElement postal=driver.findElement(By.xpath("//input[@placeholder='Code postal']"));
-	    postal.sendKeys(dataTable.cell(1, 4));
-	
-	    
-	    WebElement ville=driver.findElement(By.xpath("//input[@formcontrolname='ville']"));
-	    ville.sendKeys(dataTable.cell(1, 5));
-	 // WebDriverWait wait = new WebDriverWait(driver, 10);
-	   // WebElement ville=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Ville']")));
 	   
-	 
+	    adresse.sendKeys(dataTable.cell(1, 3));
+	    postal.sendKeys(dataTable.cell(1, 4));
+	    ville.sendKeys(dataTable.cell(1, 5));
+	    
 	}
 
 	public void cliquer_sur_suivant() {
-		WebElement suivantbtn=driver.findElement(By.xpath("//button[normalize-space()='Suivant']"));
+		
 	    Boolean test=suivantbtn.isEnabled();
 	    suivantbtn.click();
 	}
 	
 	public void remplir_zone() {
-	    WebElement webzone=driver.findElement(By.xpath("//input[@placeholder='Nom du zone']"));
+	
 	    webzone.sendKeys("zoneauto");
 	}
 	
 	
 	public void cocher_statut() {
-	   WebElement statut=driver.findElement(By.xpath("//label[@class='ant-checkbox-wrapper ant-checkbox-group-item ng-star-inserted']"));
-	   //driver.manage().timeouts().implicitlyWait(10,TimeUnit.MILLISECONDS);
+
 	   statut.click();
 	}
-	
 
 	public void enregistrer() {
-		WebElement enregistrersite=driver.findElement(By.xpath("//button[@type='submit']"));
+		
 		enregistrersite.click();
 	}
-	
 	
 	public void site_enregistre() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -104,7 +132,7 @@ public class AjoutSitePage extends BaseUtils {
 
   
     private boolean isSitePresentDansListe(String siteName) {
-    	List<WebElement> siteElements = driver.findElements(By.xpath("//td[@class='ant-table-cell-fix-left-last ant-table-cell ant-table-cell-fix-left']"));
+   
     	for (WebElement site : siteElements) {
     		 System.out.println(site.getText());
             if (site.getText().equals(siteName)) {
@@ -118,15 +146,12 @@ public class AjoutSitePage extends BaseUtils {
 	//AjoutSite Invalide 
     
     public void remplir_informations_invalides_du_site(DataTable dataTable) throws InterruptedException{
-    	 WebElement IDsite=driver.findElement(By.xpath("//input[@placeholder='Id du site']"));
+  
  	    IDsite.sendKeys(dataTable.cell(1, 0));
- 	    WebElement Nomsite=driver.findElement(By.xpath("//input[@placeholder='Nom du site']"));
  	    Nomsite.sendKeys(dataTable.cell(1, 1));
- 	   
- 	    WebElement dropdowntype=driver.findElement(By.id("type"));
  	    dropdowntype.click();
  	    String typename1=(dataTable.cell(1, 2));
- 	    List <WebElement> Optionssite=driver.findElements(By.tagName("nz-option-item")) ;
+ 	 
  	    for (WebElement option: Optionssite) {
  	    	if(option.getAttribute("title").equals(typename1)) {
  	    		((JavascriptExecutor) driver).executeScript("arguments[0].click();", option);
@@ -134,32 +159,23 @@ public class AjoutSitePage extends BaseUtils {
  	    	}
  	    }
  	    
- 	    WebElement adresse=driver.findElement(By.xpath("//input[@placeholder='Adresse']"));
  	    adresse.sendKeys(dataTable.cell(1, 3));
- 	    
- 	    WebElement postal=driver.findElement(By.xpath("//input[@placeholder='Code postal']"));
  	    postal.sendKeys(dataTable.cell(1, 4));
- 	
- 	    
- 	    WebElement ville=driver.findElement(By.xpath("//input[@formcontrolname='ville']"));
  	    ville.sendKeys(dataTable.cell(1, 5));
  	   }
 	
     public void messages_erreurs_affiches() {
-      //message erreru pour ID 
-       WebElement erreurId=driver.findElement(By.xpath("(//div[contains(@role,'alert') and contains(text(),'Erreur de saisir id')])[1]"));	
+      
+      	
        assertTrue(erreurId.isDisplayed());
        String msg="ID"+erreurId.getText();
        System.out.print(msg); // c'est correcte le msg est  bien affiché dans notre cas de test
-    
-  //message erreru pour nom
-      WebElement erreurNom=driver.findElement(By.xpath("(//div[contains(@role,'alert') and contains(text(),'Erreur saisie nom')])"));	
+ 
       assertTrue(erreurNom.isDisplayed());
     
       String MessageNom="nom"+erreurNom.getText(); 
       System.out.print(MessageNom);
-      WebElement postal=driver.findElement(By.xpath("(//div[contains(@role,'alert') and contains(text(),'Erreur saisie code postal')])"));
-      assertTrue(postal.isDisplayed());
+      assertTrue(postal1.isDisplayed());
       String MessagePastal="Postal"+erreurNom.getText();
       System.out.print(MessagePastal);  }
     
