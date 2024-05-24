@@ -21,6 +21,8 @@ public class AuthentificationPage extends BaseUtils {
 	WebElement seconnecter;
 	@FindBy(className="ant-notification")
 	WebElement successMessage;
+	
+	
 	 public void Entrer_un_identifiant_valide() {
 	    	identifiant.sendKeys(props.getProperty("Identifiant"));
 	   

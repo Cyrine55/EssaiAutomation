@@ -45,11 +45,6 @@ public void close() {
 	driver.quit();
 }
 
-/*@AfterStep
-public static void Screen(Scenario scenario) {
-	// this is for cucumber junit report
-	Utilities.ScreenExp1(scenario, driver);
-	}*/
 }
 	
 
