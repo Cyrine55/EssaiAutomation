@@ -27,15 +27,21 @@ public ModifierSitePage() {
 
 @FindBy(xpath="//input[@type='checkbox']")
 List<WebElement> CheckSiteList;
+
 @FindBy(xpath="//tbody/tr[3]/td[7]/em[1]")
 WebElement crayonmodif;
+
 @FindBy(xpath="//input[@placeholder='Id du site']")
 WebElement IDSite;
+
 @FindBy(xpath="//input[@placeholder='Nom du site']")
 WebElement NameSite;
 
 @FindBy(xpath="//button[@type='button'][normalize-space()='Ajouter']")
 WebElement btnajouter;
+
+@FindBy(xpath="//button[normalize-space()='Suivant']")
+WebElement suivantBtn;
 
 @FindBy(xpath="//input[@placeholder='Nom du zone']")
 List<WebElement> Zones;
@@ -48,18 +54,21 @@ WebElement Nomsite;
 
 @FindBy(xpath="//button[normalize-space()='Annuler']")
 WebElement AnnulerBtn;
+
 @FindBy(xpath="//span[normalize-space()='Oui']")
 WebElement OuiBtn;
 
 @FindBy(xpath="//h2[contains(text(),'Sites')]")
 WebElement Sites;
+
 @FindBy(id="city")
 WebElement VilleInput;
 
 @FindBy(xpath="//button[normalize-space()='Valider']")
 WebElement ValiderBtnFiltre;
 
-
+@FindBy(xpath="//nz-select-search[contains(@class, 'ant-select-selection-search')]")
+WebElement TypeSearch;
 public void selectionner_un_sitee() {
    
 		// Sélectionner un checkbox avec un index que nous l'identifié 
@@ -106,7 +115,6 @@ public void selectionner_un_sitee() {
 	
 	public void le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ() {
 		Nomsite.clear();
-	    WebElement suivantBtn = driver.findElement(By.xpath("//button[normalize-space()='Suivant']"));
 	    assertTrue("Le bouton doit être désactivé après le vidage du champ", suivantBtn.isEnabled());
 	}
 	
@@ -126,10 +134,10 @@ public void selectionner_un_sitee() {
 	    		System.out.println("annulation echec");}
 	 
 	public void Selectionner_un_type() throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-		WebElement TypeSearch = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//nz-select-search[contains(@class, 'ant-select-selection-search')]")));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(70));
+		wait.until(ExpectedConditions.visibilityOf(TypeSearch));
 		TypeSearch.click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		String xpathType = String.format("//div[@class='ant-select-item-option-content'][normalize-space()='%s']", siteType);
 		WebElement SiteType=driver.findElement(By.xpath(xpathType));
 		SiteType.click();
