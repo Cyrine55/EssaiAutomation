@@ -83,7 +83,15 @@ public void liste_vide_avec_message_aucune_donnee() {
   Sitepage.liste_vide_avec_message_aucune_donnee();
 }
 
+@When("cliquer sur le bouton importer")
+public void cliquer_sur_le_bouton_importer() {
+	Sitepage.cliquer_sur_le_bouton_importer(); 
+}
 
+@When("cliquer sur le bouton parcourir et selectionner un fichier")
+public void cliquer_sur_le_bouton_parcourir_et_selectionner_un_fichier() {
+	Sitepage.cliquer_sur_le_bouton_parcourir_et_selectionner_un_fichier();    
+}
 
 
 

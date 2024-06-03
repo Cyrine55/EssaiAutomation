@@ -70,8 +70,20 @@ public class AjoutSitePage extends BaseUtils {
 	 @FindBy(xpath="(//div[contains(@role,'alert') and contains(text(),'Erreur saisie nom')])")
 	WebElement erreurNom;
 	 @FindBy(xpath="(//div[contains(@role,'alert') and contains(text(),'Erreur saisie code postal')])")
-		WebElement postal1;
-		 
+	WebElement postal1;
+	 
+	 //Ajout par export
+	 @FindBy(xpath="//div/span/button[2]")
+	 WebElement ImporterBtn;
+	 @FindBy(xpath="//nz-modal-container/div/div/div[2]/import-add/div/div[1]/div[2]/label/span[2]")
+	 WebElement Parcourir;	 
+	 @FindBy(id="file-upload")
+	 WebElement inputfile;
+	 @FindBy(xpath="//button[@type='submit']")
+	 WebElement Importer;
+	 
+	 //@FindBy(id="//nz-modal-container/div/div/div[2]/import-add/div/div[1]/div[2]/label/span[2]")
+	 
 	public void liste_des_sites_affichees() throws InterruptedException {
 		Thread.sleep(4000);		
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
@@ -223,4 +235,36 @@ public class AjoutSitePage extends BaseUtils {
     	  //aucunmsg.isDisplayed();
     	  assertTrue(aucunmsg.isDisplayed())	;
     }
+    
+    //Ajout site avec import fichier json
+    public void cliquer_sur_le_bouton_importer() {
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(ImporterBtn));
+        ImporterBtn.click();
+    }
+    
+    public void cliquer_sur_le_bouton_parcourir_et_selectionner_un_fichier() {
+    	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(Parcourir));
+        inputfile.sendKeys("C:\\Users\\Cyrine\\Desktop\\plans.json");
+        Importer.click();
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
