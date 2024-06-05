@@ -1,5 +1,7 @@
 package Pages;
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByXPath;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -24,7 +26,8 @@ public class AuthentificationPage extends BaseUtils {
 	
 	
 	 public void Entrer_un_identifiant_valide() {
-	    	identifiant.sendKeys(props.getProperty("Identifiant"));
+	 //WebElement identifiant1 =  driver.findElement(By.xpath("//input[@placeholder='Identifiant']"));
+		 identifiant.sendKeys(props.getProperty("Identifiant"));
 	   
 	    }
 	 

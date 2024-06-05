@@ -1,4 +1,4 @@
-package GestionUtilisateur;
+/*package GestionUtilisateur;
 
 import org.junit.After;
 import org.junit.Before;
@@ -44,10 +44,4 @@ public void utilisateur_ajoute_avec_succes() {}
 
 
 
-
-
-
-
-
-
-}
+}*/

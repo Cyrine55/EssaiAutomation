@@ -1,5 +1,7 @@
 package StepDefinitions;
 
+import static org.junit.Assert.assertTrue;
+
 import Formation.Utils.BaseUtils;
 import Pages.AjoutSitePage;
 import io.cucumber.datatable.DataTable;
@@ -93,9 +95,15 @@ public void cliquer_sur_le_bouton_parcourir_et_selectionner_un_fichier() {
 	Sitepage.cliquer_sur_le_bouton_parcourir_et_selectionner_un_fichier();    
 }
 
+@When("cliquer sur importer")
+public void cliquer_sur_importer() {
+	Sitepage.cliquer_sur_importer();
+}
 
-
-
+@Then("message erreur affiche")
+public void message_erreur_affiche() {
+	Sitepage.message_erreur_affiche();
+}
 
 
 

@@ -30,14 +30,14 @@ Feature: Modifier un site
    # Then le bouton Suivant doit etre desactive apres vidage du champ
     
     
-  # @Site
-  #  Scenario: Annuler la modification du site
-   # Given Liste des sites affichees
-   # When Selectionner un sitee
-   # When Cliquer sur crayon modifier
-   # And Cliquer sur le bouton Annuler
-    #And Valider par clique sur oui
-   # Then Popup du modification doit etre ferme
+   @Site
+    Scenario: Annuler la modification du site
+    Given Liste des sites affichees
+    When Selectionner un sitee
+    When Cliquer sur crayon modifier
+    And Cliquer sur le bouton Annuler
+    And Valider par clique sur oui
+    Then Popup du modification doit etre ferme
     
     
     @Sitetest

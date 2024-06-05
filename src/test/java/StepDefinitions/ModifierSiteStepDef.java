@@ -44,7 +44,6 @@ public void saisir_nouveau_nom_du_zone_et_un_nouveau_statut(){
 	
 }
 
-
 @Test
 @Then("le bouton Suivant doit etre desactive apres vidage du champ")
 public void le_bouton_Suivant_doit_etre_desactive_apres_vidage_du_champ() {

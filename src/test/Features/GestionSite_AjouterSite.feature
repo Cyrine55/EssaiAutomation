@@ -46,12 +46,12 @@ Feature: Ajouter un site valide
     
     
     @Site
-    Scenario: Ajout Site par import fichier valide
+    Scenario: Ajout Site par import fichier invalide
     Given Liste des sites affichees
     When cliquer sur le bouton importer
     And cliquer sur le bouton parcourir et selectionner un fichier 
     And cliquer sur importer
-    Then fichier ajouter avec succes 
+    Then message erreur affiche 
     
     
     

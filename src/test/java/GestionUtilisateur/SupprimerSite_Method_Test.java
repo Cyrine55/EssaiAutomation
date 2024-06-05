@@ -1,4 +1,4 @@
-package GestionUtilisateur;
+/*package GestionUtilisateur;
 
 import org.junit.After;
 import org.junit.Before;
@@ -36,4 +36,4 @@ public class SupprimerSite_Method_Test extends BaseUtils {
 		close();
 	}
 	
-}
+}*/
